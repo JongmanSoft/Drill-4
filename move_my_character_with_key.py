@@ -9,7 +9,7 @@ def handle_event():
     global state  #0 : stand 1: walk 2:run
     global dir #0: up, 1:upleft 2:left 3:downleft 4:down
     global vhdir
-    global leftdown, rightdown, updown, downdown , spacedown
+    global  leftdown, rightdown, updown, downdown , spacedown
 
     events = get_events()
     for event in events:
@@ -52,7 +52,7 @@ def handle_event():
 
     if (updown and (leftdown or rightdown)):dir = 1
     elif (downdown and (leftdown or rightdown)): dir = 3
-    elif ((leftdown or rightdown)) dir = 2
+    elif ((leftdown or rightdown)): dir = 2
     elif (updown): dir = 0
     elif (downdown):dir = 4
 
@@ -60,7 +60,13 @@ back = load_image('TUK_GROUND.png')
 stand = load_image('stand.png')
 walk = load_image('walk.png')
 
+xdir = 0
+ydir =0
+state = 0  # 0 : stand 1: walk 2:run
+dir = 4  # 0: up, 1:upleft 2:left 3:downleft 4:down
+vhdir = 0
+leftdown, rightdown, updown, downdown , spacedown
+
 open_canvas()
 
 while(True):
-    
