@@ -49,3 +49,13 @@ def handle_event():
     if (spacedown and (updown or downdown or rightdown or leftdown)): state = 2
     elif (updown or downdown or rightdown or leftdown): state = 1
     else: state = 0
+
+    if (updown and (leftdown or rightdown)):dir = 1
+    elif (downdown and (leftdown or rightdown)): dir = 3
+    elif ((leftdown or rightdown)) dir = 2
+    elif (updown): dir = 0
+    elif (downdown):dir = 4
+
+
+stand = load_image()
+walk = load_image()
