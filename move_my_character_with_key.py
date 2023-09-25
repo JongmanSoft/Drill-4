@@ -30,4 +30,22 @@ def handle_event():
                 ydir -= 1
             if (event.key == SDLK_SPACE):
                 spacedown =1
-        
+        elif (event.type == SDL_KEYUP):
+            if (event.type == SDL_KEYDOWN):
+                if (event.key == SDLK_RIGHT):
+                    rightdown = 0
+                    xdir -= 1
+                if (event.key == SDLK_LEFT):
+                    leftdown = 0
+                    xdir += 1
+                if (event.key == SDLK_UP):
+                    updown = 0
+                    ydir -= 1
+                if (event.key == SDLK_DOWN):
+                    downdown = 0
+                    ydir += 1
+                if (event.key == SDLK_SPACE):
+                    spacedown = 0
+    if (spacedown and (updown or downdown or rightdown or leftdown)): state = 2
+    elif (updown or downdown or rightdown or leftdown): state = 1
+    else: state = 0
