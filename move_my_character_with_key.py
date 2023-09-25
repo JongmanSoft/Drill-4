@@ -56,6 +56,11 @@ def handle_event():
     elif (updown): dir = 0
     elif (downdown):dir = 4
 
+back = load_image('TUK_GROUND.png')
+stand = load_image('stand.png')
+walk = load_image('walk.png')
 
-stand = load_image()
-walk = load_image()
+open_canvas()
+
+while(True):
+    
