@@ -15,11 +15,19 @@ def handle_event():
     for event in events:
         if (event.type == SDL_KEYDOWN):
             if (event.key == SDLK_RIGHT):
-
+                vhdir = 1
+                rightdown = 1
+                xdir += 1
             if (event.key == SDLK_LEFT):
-
+                vhdir = 0
+                leftdown = 1
+                xdir -= 1
             if (event.key == SDLK_UP):
-
+                updown = 1
+                ydir += 1
             if (event.key == SDLK_DOWN):
-
+                downdown = 1
+                ydir -= 1
             if (event.key == SDLK_SPACE):
+                spacedown =1
+        
