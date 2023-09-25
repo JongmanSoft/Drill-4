@@ -45,7 +45,6 @@ while(True):
                 spacedown = 1
         elif (event.type == SDL_KEYUP):
             if (event.key == SDLK_RIGHT):
-                print("오른쪽키업!")
                 rightdown = 0
                 xdir -= 1
             if (event.key == SDLK_LEFT):
